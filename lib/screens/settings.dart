@@ -41,7 +41,7 @@ void SignUserOut(){
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("phone: ", style: stylekey,),
-                Text("+996 709 74 04 67", style: style,)
+                Text(user.phoneNumber.toString(), style: style,)
               ],
             ),
           )

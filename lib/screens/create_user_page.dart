@@ -16,6 +16,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final emailcontroller = TextEditingController();
   final password = TextEditingController();
   final confirmPassword = TextEditingController();
+  final phoneNumber = TextEditingController();
 
   void SignUserInUp() async {
     // user wait loading
@@ -88,6 +89,9 @@ class _RegisterPageState extends State<RegisterPage> {
                  ),
                  SizedBox(height: 5,),
                  LoginTextField(controller: confirmPassword, hintText: "confirm password", obscureText: true
+                 ),
+                  SizedBox(height: 5,),
+                 LoginTextField(controller: phoneNumber, hintText: "phone number", obscureText: false
                  ),
                 SizedBox(height: 25,),
                 MyButton(onTap: SignUserInUp , String: "Sign Up",
