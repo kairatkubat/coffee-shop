@@ -6,26 +6,28 @@ import 'package:flutter/material.dart';
  class ItemsWidget extends StatelessWidget {
    
    List img = [
-    'Latte',
-    'Espresso',
-    'Cold Coffee',
-    'Black Coffee'
+    // 'Latte',
+    // 'Espresso',
+    // 'Cold Coffee',
+    // 'Black Coffee'
    ];
+
+  ItemsWidget({super.key, required this.img});
  
    @override
    Widget build(BuildContext context) {
      return GridView.count(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const  NeverScrollableScrollPhysics(),
       crossAxisCount: 2,
       shrinkWrap: true,
       childAspectRatio: (150/195),
       children: [
         for(int i = 0; i< img.length; i++)
         Container(
-          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 13),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),
-          color: Color(0xFF212325),
+          color: const Color(0xFF212325),
           boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.4), 
@@ -38,20 +40,19 @@ import 'package:flutter/material.dart';
           child: Column(
             children: [
               InkWell(
-                
                 onTap: () {
                   Navigator.push(context, 
                   MaterialPageRoute(builder: (context) => SinglePageScreen(img[i])));
                 },
                 child: Container(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   child: Image.asset('images/${img[i]}.png',
                   width: 120, height: 120 ,fit: BoxFit.contain,
                   ),
                 ),
               
               ),
-              Padding(padding: EdgeInsets.only(bottom: 8),
+              Padding(padding: const EdgeInsets.only(bottom: 8),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Column(
@@ -77,11 +78,11 @@ import 'package:flutter/material.dart';
               ),
               Padding(
                 
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("\$30", 
+                      const Text("\$30", 
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.white,
@@ -89,11 +90,11 @@ import 'package:flutter/material.dart';
                       ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(color: Color(0xFFE57734),
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(color: const Color(0xFFE57734),
                         borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           CupertinoIcons.add,
                           size: 20, color: Colors.white,
                           

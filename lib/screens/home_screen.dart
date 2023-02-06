@@ -15,6 +15,12 @@ class HomeScreen  extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin{
   final controllerOnew = TextField();
+  var img = [
+              'Latte',
+    'Espresso',
+    'Cold Coffee',
+    'Black Coffee'
+            ];
   late TabController _tabController;
   @override
   void initState(){
@@ -121,15 +127,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                  Tab(text: "Americano",),
             ],
             
+            
             ),
             SizedBox(height: 10,),
             
             Center(
               child: [
-                ItemsWidget(),
-                 ItemsWidget(),
-                  ItemsWidget(),
-                   ItemsWidget(),
+                ItemsWidget(img: img),
+                 ItemsWidget(img: img),
+                  ItemsWidget(img:img),
+                   ItemsWidget(img:img ),
                 
               ][_tabController.index],
             ),

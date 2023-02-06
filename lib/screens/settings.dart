@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 class SettingPage extends StatelessWidget {
   bool ifLoggedOut = false;
   final user = FirebaseAuth.instance.currentUser!;
+  final phoneNumber = FirebaseAuth.instance.currentUser?.phoneNumber;
    SettingPage({super.key});
 void SignUserOut(){
   FirebaseAuth.instance.signOut(); 

@@ -28,8 +28,10 @@ class _LogState extends State<Log> {
       );
 
     try{
-       await FirebaseAuth.instance.signInWithEmailAndPassword(
+       var resp = await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: emailcontroller.text, password: password.text);
+
+      print(resp);
 
       Navigator.pop(context);
     } on FirebaseAuthException catch (e){
