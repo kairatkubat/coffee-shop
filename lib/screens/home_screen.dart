@@ -134,9 +134,9 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             Center(
               child: [
                 ItemsWidget(img: img),
-                 ItemsWidget(img: img),
-                  ItemsWidget(img:img),
-                   ItemsWidget(img:img ),
+                //  ItemsWidget(img: img),
+                //   ItemsWidget(img:img),
+                  //  ItemsWidget(img:img ),
                 
               ][_tabController.index],
             ),
