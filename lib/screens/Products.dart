@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Products extends StatefulWidget {
-  
+ 
   Products({super.key});
 
   @override
@@ -10,6 +10,14 @@ class Products extends StatefulWidget {
 }
 
 class _ProductsState extends State<Products> {
+   List<String> Terms = [
+  "expresso",
+  "cappuccino",
+  "americano",
+  "latte",
+  "iceCofee",
+  "turkish"
+];
   final _img = Image.asset("images/bg.png");
   double _expandedHeight = 200;
    bool _pinned = true;
@@ -50,20 +58,35 @@ class _ProductsState extends State<Products> {
               ),
             ),
           ),
-          // SliverList(
-          //   delegate: SliverChildBuilderDelegate(
-          //     (BuildContext context, int index) {
-          //       return Container(
-          //         color: index.isOdd ? Colors.white : Colors.black12,
-          //         height: 50.0,
-          //         child: Center(
-          //           child: Text('$index', textScaleFactor: 5),
-          //         ),
-          //       );
-          //     },
-          //     childCount: 20,
-          //   ),
-          // ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                // return Container(
+                //   color: index.isOdd ? Colors.white : Colors.black12,
+                //   height: 50.0,
+                //   child: 
+
+                return
+                  Container(
+                    color: index.isOdd ? Colors.white : Colors.black12,
+                    child: Column(
+                       children: [
+                      
+                        
+                           for(int i = 0; i<Terms.length; i++)
+                          Text(Terms[i], textScaleFactor: 2),
+                          
+                    
+                       ],
+                    ),
+                  );
+               // );
+              },
+              childCount: 12,
+            ),
+          ),
+          
+          
         ],
       ),);
   }
